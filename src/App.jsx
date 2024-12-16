@@ -1,5 +1,6 @@
 import HomePage from "./components/HomePage.jsx";
 import { Routes, Route } from "react-router-dom";
+import Habits from "./components/Habits.jsx";
 import "./App.css";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/habits" />
+        <Route path="/habits" element={<Habits />} />
       </Routes>
     </>
   );

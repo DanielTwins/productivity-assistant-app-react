@@ -16,13 +16,6 @@ function HomePage({ todos, habits, events }) {
   return (
     <>
       <h1>Home Page</h1>
-      <h2>Uncompleted tasks</h2>
-      <ul>
-        {recentTodos.map((todo) => (
-          <li key={todos.id}>{todo.titel}</li>
-        ))}
-      </ul>
-      <Link to="/todos">All Todos</Link>
       <h2>Top repititions</h2>
       <ul>
         {topReps.map((habit) => (

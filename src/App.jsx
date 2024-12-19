@@ -1,16 +1,20 @@
-import HomePage from "./components/HomePage.jsx";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Habits from "./components/Habits.jsx";
+import HomePage from "./components/HomePage";
+import Habits from "./components/Habits";
 import "./App.css";
 
 function App() {
+  const [habits, setHabits] = useState([]);
+
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/habits" element={<Habits />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage habits={habits} />} />
+      <Route
+        path="/habits"
+        element={<Habits habits={habits} setHabits={setHabits} />}
+      />
+    </Routes>
   );
 }
 

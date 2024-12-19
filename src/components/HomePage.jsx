@@ -1,39 +1,23 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-function HomePage({ todos, habits, events }) {
-  const recentTodos = todos.filter((t) => !t.complete).slice(0, 3);
-
+function HomePage({ habits }) {
   const topReps = habits
-    .sort((a, b) => b.repititions - a.repititions)
+    .sort((a, b) => b.repetitions - a.repetitions)
     .slice(0, 3);
-
-  const nextDate = events.sort((a, b) => {
-    let d1 = newDate(a);
-    let d2 = newDate(b);
-    d1 > d2 ? 1 : -1;
-  });
 
   return (
     <>
       <h1>Home Page</h1>
-      <h2>Top repititions</h2>
+      <h2>Top Repetitions</h2>
       <ul>
         {topReps.map((habit) => (
-          <li key={habits.id}>
-            {habit.title} - {habit.repititions}
+          <li key={habit.id}>
+            {habit.title} - {habit.repetitions}
           </li>
         ))}
       </ul>
       <Link to="/habits">All Habits</Link>
-      <h2>upcoming events</h2>
-      <ul>
-        {nextDate.map((event) => (
-          <li key={events.id}>
-            {event.name} - {event.start}
-          </li>
-        ))}
-      </ul>
-      <Link to="/event">All Events</Link>
     </>
   );
 }

@@ -1,0 +1,47 @@
+.habit-input {
+  font-size: 1rem;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+.list-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.habit-list {
+  font-size: 1.3rem;
+  padding: 10px;
+  background-color: hsl(0, 0%, 30%);
+  margin-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 6px;
+  display: flex;
+}
+
+.habit-text {
+  flex: 1;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+button {
+  margin: 2px;
+}
+
+.delete-button {
+  background-color: rgb(173, 0, 0);
+}
+
+.count {
+  margin: 6px;
+}
+
+.select-priority {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

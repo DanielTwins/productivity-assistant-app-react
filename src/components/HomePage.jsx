@@ -17,7 +17,7 @@ function HomePage({ habits }) {
           </li>
         ))}
       </ul>
-      <Link to="/habits">All Habits</Link>
+      <Link to="/habits">View all Habits</Link>
     </>
   );
 }

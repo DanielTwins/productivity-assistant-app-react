@@ -1,0 +1,10 @@
+.links-container {
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: hsl(0, 0%, 20%);
+}
+
+.list-links {
+  list-style: none;
+  padding: 0;
+}
